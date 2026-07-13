@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Name | Personal Website</title>
+    <meta
+      name="description"
+      content="Personal academic website for Your Name, including education, projects, awards, skills, and research interests."
+    />
+    <meta property="og:title" content="Your Name | Personal Website" />
+    <meta
+      property="og:description"
+      content="Education, projects, awards, skills, and research interests."
+    />
+    <meta property="og:image" content="assets/hero-study-desk.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="#top">Your Name</a>
+      <nav class="nav-links" aria-label="Site sections">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-label="Introduction">
+        <div class="hero__shade"></div>
+        <div class="hero__content">
+          <p class="eyebrow">Student Portfolio</p>
+          <h1>Your Name</h1>
+          <p class="hero__lead">
+            I am a student at Tsinghua University interested in machine learning,
+            computer vision, and reliable research-oriented engineering.
+          </p>
+          <div class="hero__actions" aria-label="Primary links">
+            <a class="button button--primary" href="#projects">View Projects</a>
+            <a class="button button--secondary" href="assets/your_name_CV.pdf">Download CV</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="snapshot" aria-label="Quick profile">
+        <div>
+          <span class="snapshot__value">Tsinghua</span>
+          <span class="snapshot__label">University</span>
+        </div>
+        <div>
+          <span class="snapshot__value">ML / CV</span>
+          <span class="snapshot__label">Research Interests</span>
+        </div>
+        <div>
+          <span class="snapshot__value">GitHub</span>
+          <span class="snapshot__label">github.com/yourname</span>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="section__heading">
+          <p class="eyebrow">About</p>
+          <h2>Self-Introduction</h2>
+        </div>
+        <div class="section__body prose">
+          <p>
+            Replace this paragraph with a concise self-introduction. Mention
+            your current program, academic interests, strengths, and what kind
+            of research or engineering work you hope to pursue. Keep the tone
+            specific and professional.
+          </p>
+          <p>
+            This website is designed to match the LaTeX CV assignment: it
+            highlights education, awards, projects, skills, and research
+            interests while remaining easy to publish through GitHub Pages.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--tinted" id="education">
+        <div class="section__heading">
+          <p class="eyebrow">Background</p>
+          <h2>Education</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline__item">
+            <span class="timeline__date">2025 - Present</span>
+            <h3>Tsinghua University</h3>
+            <p>Program / Department / Degree Track</p>
+            <ul>
+              <li>Relevant coursework: programming, data structures, statistics, machine learning.</li>
+              <li>Academic focus: replace this with your own study direction.</li>
+            </ul>
+          </article>
+          <article class="timeline__item">
+            <span class="timeline__date">2021 - 2025</span>
+            <h3>Previous School or Program</h3>
+            <p>Major / Degree</p>
+            <ul>
+              <li>GPA, ranking, thesis, or academic training can be listed here.</li>
+              <li>Use one concrete line about your graduation project or exchange experience.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section__heading">
+          <p class="eyebrow">Work</p>
+          <h2>Selected Projects</h2>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <p class="card__meta">Course Project · Spring 2026</p>
+            <h3>Project Title</h3>
+            <p>
+              Describe the problem, your role, the technical method, and the
+              result. Add a GitHub or report link if available.
+            </p>
+          </article>
+          <article class="card">
+            <p class="card__meta">Research Practice · 2025</p>
+            <h3>Research or Engineering Experience</h3>
+            <p>
+              Replace publication-heavy content with experiments, reading
+              notes, implementation work, or reproducible analysis.
+            </p>
+          </article>
+          <article class="card">
+            <p class="card__meta">Independent Study</p>
+            <h3>Technical Exploration</h3>
+            <p>
+              Summarize a self-directed project, open-source contribution, or
+              tool you built while learning a topic.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--tinted" id="awards">
+        <div class="section__heading">
+          <p class="eyebrow">Recognition</p>
+          <h2>Honors and Awards</h2>
+        </div>
+        <div class="award-list">
+          <article class="award">
+            <span>2025</span>
+            <p>Scholarship / academic honor / competition award.</p>
+          </article>
+          <article class="award">
+            <span>2024</span>
+            <p>Outstanding student award / course project prize.</p>
+          </article>
+          <article class="award">
+            <span>2023</span>
+            <p>Innovation challenge prize / volunteer recognition.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="section__heading">
+          <p class="eyebrow">Toolkit</p>
+          <h2>Personal Skills</h2>
+        </div>
+        <div class="skills">
+          <div>
+            <h3>Programming</h3>
+            <p>Python, C/C++, MATLAB, JavaScript, Git, Linux command line.</p>
+          </div>
+          <div>
+            <h3>Research Tools</h3>
+            <p>LaTeX, Overleaf, Jupyter Notebook, data visualization, technical writing.</p>
+          </div>
+          <div>
+            <h3>Communication</h3>
+            <p>Chinese, English academic reading and writing, presentations, teamwork.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--compact" id="interests">
+        <div class="section__heading">
+          <p class="eyebrow">Direction</p>
+          <h2>Research Interests</h2>
+        </div>
+        <div class="tag-list" aria-label="Research interest tags">
+          <span>Computer Vision</span>
+          <span>Machine Learning</span>
+          <span>Medical Imaging</span>
+          <span>Robotics</span>
+          <span>Data Mining</span>
+          <span>Scientific Computing</span>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="section__heading">
+          <p class="eyebrow">Contact</p>
+          <h2>Let's Connect</h2>
+        </div>
+        <div class="contact__links">
+          <a href="mailto:youremail@example.com">youremail@example.com</a>
+          <a href="https://github.com/yourname">github.com/yourname</a>
+          <a href="assets/your_name_CV.pdf">CV PDF</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Last updated July 2026 | Your Name</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
