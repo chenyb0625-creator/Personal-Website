@@ -3,197 +3,157 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Chen Yibo | Personal Website</title>
+    <title>Chen Yibo | Tsinghua University</title>
     <meta
       name="description"
-      content="Chen Yibo is an undergraduate student in the Department of Automation at Tsinghua University, interested in artificial general intelligence, world models, robotics, and machine learning."
+      content="Chen Yibo is an undergraduate researcher in the Department of Automation at Tsinghua University, studying AI agents, reasoning behavior, evaluation, and cognitive architectures."
     />
-    <meta property="og:title" content="Chen Yibo | Personal Website" />
+    <meta property="og:title" content="Chen Yibo | Tsinghua University" />
     <meta
       property="og:description"
-      content="Automation undergraduate at Tsinghua University exploring AGI, world models, embodied cognition, robotics, and machine learning."
+      content="Undergraduate researcher at Tsinghua University working on AI agents, reasoning behavior, evaluation, and cognitive architectures."
     />
-    <meta property="og:image" content="assets/hero-study-desk.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header" aria-label="Primary navigation">
-      <a class="brand" href="#top" aria-label="Chen Yibo, back to top">Chen Yibo</a>
+      <a class="brand" href="#top">Chen Yibo</a>
       <nav class="nav-links" aria-label="Site sections">
         <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#project">Project</a>
-        <a href="#skills">Skills</a>
+        <a href="#research">Research</a>
+        <a href="#background">Background</a>
         <a href="#contact">Contact</a>
+        <a class="nav-cv" href="assets/chenyibo_cv.pdf">CV</a>
       </nav>
     </header>
 
     <main id="main">
       <section class="hero" id="top" aria-label="Introduction">
-        <div class="hero__content">
-          <p class="eyebrow">Tsinghua University · Department of Automation</p>
+        <div class="hero__inner">
+          <p class="kicker">Tsinghua University · Department of Automation</p>
           <h1>Chen Yibo</h1>
+          <p class="hero__role">Undergraduate researcher in artificial intelligence.</p>
           <p class="hero__lead">
-            Undergraduate student exploring artificial general intelligence,
-            world models, embodied cognition, robotics, and machine learning.
+            I study how AI systems reason and act in interactive settings — especially
+            how agents allocate computation and actions, respond to evidence, revise
+            their behavior, and turn recognition into execution.
           </p>
-          <div class="hero__actions" aria-label="Primary links">
-            <a class="button button--primary" href="#about">About Me</a>
-            <a
-              class="button button--secondary"
-              href="assets/chenyibo_cv.pdf"
-              download="chenyibo_cv.pdf"
-            >Download CV</a>
+          <div class="hero__links" aria-label="Primary links">
+            <a href="mailto:cyb25@mails.tsinghua.edu.cn">Email</a>
+            <a href="https://github.com/chenyb0625-creator" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <a href="assets/chenyibo_cv.pdf">CV</a>
           </div>
         </div>
-      </section>
-
-      <section class="snapshot" aria-label="Quick profile">
-        <div>
-          <span class="snapshot__value">Tsinghua University</span>
-          <span class="snapshot__label">Department of Automation</span>
-        </div>
-        <div>
-          <span class="snapshot__value">AGI &amp; Robotics</span>
-          <span class="snapshot__label">Academic Interests</span>
-        </div>
-        <a
-          class="snapshot__link"
-          href="https://github.com/Cyber0625"
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Open Chen Yibo's GitHub profile"
-        >
-          <span class="snapshot__value">Cyber0625</span>
-          <span class="snapshot__label">View GitHub Profile ↗</span>
-        </a>
       </section>
 
       <section class="section" id="about">
-        <div class="section__heading">
-          <p class="eyebrow">About</p>
-          <h2>A little about me</h2>
-        </div>
-        <div class="section__body prose">
+        <div class="section__label">About</div>
+        <div class="section__content prose">
           <p>
-            Hello, I am Chen Yibo, an undergraduate student in the Department
-            of Automation at Tsinghua University. I am especially interested in
-            artificial general intelligence and in how internal models,
-            cognition, and physical interaction can work together.
+            I am an undergraduate student in the Department of Automation at Tsinghua
+            University. My current work focuses on controlled empirical studies of
+            model behavior, with a particular interest in AI agents and reasoning
+            systems.
           </p>
           <p>
-            I am currently learning and building around theory of mind, world
-            models, embodied cognition, robotics, and machine learning. I enjoy
-            turning research ideas into working prototypes and documenting the
-            process clearly.
+            A recurring question in my research is why a model can notice, describe,
+            or even explicitly acknowledge relevant information without that
+            information reliably changing what it does next. I am interested in
+            studying these gaps behaviorally and using them to inform better
+            evaluation, training, and cognitive architectures for AI.
           </p>
         </div>
       </section>
 
-      <section class="section section--tinted" id="education">
-        <div class="section__heading">
-          <p class="eyebrow">Background</p>
+      <section class="section" id="research">
+        <div class="section__label">Research</div>
+        <div class="section__content">
+          <h2>Research interests</h2>
+          <div class="interest-grid">
+            <article class="interest">
+              <h3>AI Agents &amp; Model Behavior</h3>
+              <p>
+                Behavioral regularities in tool-using and coding agents, including
+                action allocation, adaptation, persistence, and decision-making under
+                changing evidence.
+              </p>
+            </article>
+            <article class="interest">
+              <h3>Reasoning &amp; Revision</h3>
+              <p>
+                When additional computation, reflection, or feedback changes an
+                operative hypothesis — and when it only produces local repair without
+                genuine revision.
+              </p>
+            </article>
+            <article class="interest">
+              <h3>Evaluation &amp; Experimental Design</h3>
+              <p>
+                Controlled experiments and evaluation environments that separate
+                surface success from the mechanisms and behavioral changes that
+                produce it.
+              </p>
+            </article>
+            <article class="interest">
+              <h3>Cognitive Architectures for AI</h3>
+              <p>
+                How capabilities needed for robust execution — such as evaluation,
+                memory, adaptation, and control — can become native parts of learned
+                systems rather than only external scaffolding.
+              </p>
+            </article>
+          </div>
+          <p class="research-note">
+            I am especially interested in questions at the boundary between machine
+            learning, cognitive science, and interactive intelligent systems.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="background">
+        <div class="section__label">Background</div>
+        <div class="section__content">
           <h2>Education</h2>
-        </div>
-        <div class="timeline">
-          <article class="timeline__item">
-            <span class="timeline__date">2025 - Present</span>
-            <h3>Tsinghua University</h3>
-            <p>Department of Automation</p>
-            <p class="timeline__detail">Academic focus: Artificial General Intelligence</p>
-          </article>
-          <article class="timeline__item">
-            <span class="timeline__date">2022 - 2025</span>
-            <h3>Harbin Deqiang Senior High School</h3>
-            <p>Senior high school education</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="project">
-        <div class="section__heading">
-          <p class="eyebrow">Course Project</p>
-          <h2>Intelligent Vehicle Scheduling</h2>
-        </div>
-        <article class="project">
-          <div class="project__meta">
-            <span>Spring 2026</span>
-            <span>Multi-Agent Reinforcement Learning</span>
+          <div class="education">
+            <div>
+              <p class="education__school">Tsinghua University</p>
+              <p>Department of Automation · Undergraduate</p>
+            </div>
+            <span>2025–Present</span>
           </div>
-          <p>
-            A course project on intelligent vehicle scheduling based on
-            multi-agent reinforcement learning, with a focus on coordinating
-            multiple decision-making agents in a dynamic scheduling scenario.
-          </p>
-        </article>
-      </section>
-
-      <section class="section section--tinted" id="skills">
-        <div class="section__heading">
-          <p class="eyebrow">Toolkit</p>
-          <h2>Skills</h2>
-        </div>
-        <div class="skills">
-          <div>
-            <h3>Programming</h3>
-            <p>Python, C/C++, MATLAB</p>
-          </div>
-          <div>
-            <h3>Tools</h3>
-            <p>LaTeX, Overleaf, VS Code, Jupyter Notebook, GitHub</p>
-          </div>
-          <div>
-            <h3>Knowledge</h3>
-            <p>Machine learning, deep learning, reinforcement learning</p>
-          </div>
-          <div>
-            <h3>Languages &amp; Strengths</h3>
-            <p>Chinese; academic English; independent learning, documentation, and teamwork</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section--compact" id="interests">
-        <div class="section__heading">
-          <p class="eyebrow">Direction</p>
-          <h2>Research Interests</h2>
-        </div>
-        <div class="tag-list" aria-label="Research interest tags">
-          <span>Theory of Mind</span>
-          <span>Machine Learning</span>
-          <span>Robotics</span>
-          <span>World Models</span>
-          <span>Embodied Cognition</span>
-          <span>Vibe Coding</span>
         </div>
       </section>
 
       <section class="section contact" id="contact">
-        <div class="section__heading">
-          <p class="eyebrow">Contact</p>
-          <h2>Get in touch</h2>
-        </div>
-        <div class="contact__links">
-          <a href="mailto:cyb25@mails.tsinghua.edu.cn">
-            <span>Email</span>
-            cyb25@mails.tsinghua.edu.cn
-          </a>
-          <a href="https://github.com/Cyber0625" target="_blank" rel="noreferrer">
-            <span>GitHub</span>
-            github.com/Cyber0625 ↗
-          </a>
-          <a href="assets/chenyibo_cv.pdf" download="chenyibo_cv.pdf">
-            <span>Curriculum Vitae</span>
-            Download chenyibo_cv.pdf
-          </a>
+        <div class="section__label">Contact</div>
+        <div class="section__content">
+          <h2>Contact</h2>
+          <p class="contact__intro">
+            The easiest way to reach me is by email. I am happy to hear from people
+            interested in related research questions.
+          </p>
+          <div class="contact__links">
+            <a href="mailto:cyb25@mails.tsinghua.edu.cn">
+              <span>Email</span>
+              cyb25@mails.tsinghua.edu.cn
+            </a>
+            <a href="https://github.com/chenyb0625-creator" target="_blank" rel="noreferrer">
+              <span>GitHub</span>
+              chenyb0625-creator ↗
+            </a>
+            <a href="assets/chenyibo_cv.pdf">
+              <span>Curriculum Vitae</span>
+              View CV
+            </a>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© 2026 Chen Yibo · Beijing, China</p>
+      <p>© 2026 Chen Yibo</p>
     </footer>
 
     <script src="script.js"></script>
