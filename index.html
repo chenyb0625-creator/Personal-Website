@@ -6,12 +6,12 @@
     <title>Chen Yibo | Tsinghua University</title>
     <meta
       name="description"
-      content="Chen Yibo is an undergraduate researcher in the Department of Automation at Tsinghua University, studying AI agents, reasoning behavior, evaluation, and cognitive architectures."
+      content="Chen Yibo is an undergraduate researcher at Tsinghua University studying AI agents, model behavior, reasoning-to-action gaps, and evaluation."
     />
     <meta property="og:title" content="Chen Yibo | Tsinghua University" />
     <meta
       property="og:description"
-      content="Undergraduate researcher at Tsinghua University working on AI agents, reasoning behavior, evaluation, and cognitive architectures."
+      content="Undergraduate researcher at Tsinghua University working on AI agents, model behavior, reasoning, internalization, and evaluation."
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -22,6 +22,7 @@
       <a class="brand" href="#top">Chen Yibo</a>
       <nav class="nav-links" aria-label="Site sections">
         <a href="#about">About</a>
+        <a href="#publications">Preprints</a>
         <a href="#research">Research</a>
         <a href="#background">Background</a>
         <a href="#contact">Contact</a>
@@ -36,9 +37,9 @@
           <h1>Chen Yibo</h1>
           <p class="hero__role">Undergraduate researcher in artificial intelligence.</p>
           <p class="hero__lead">
-            I study how AI systems reason and act in interactive settings — especially
-            how agents allocate computation and actions, respond to evidence, revise
-            their behavior, and turn recognition into execution.
+            I study how AI agents turn information and reasoning into action:
+            when evidence changes behavior, when it does not, and how these
+            differences should reshape evaluation and model design.
           </p>
           <div class="hero__links" aria-label="Primary links">
             <a href="mailto:cyb25@mails.tsinghua.edu.cn">Email</a>
@@ -52,18 +53,71 @@
         <div class="section__label">About</div>
         <div class="section__content prose">
           <p>
-            I am an undergraduate student in the Department of Automation at Tsinghua
-            University. My current work focuses on controlled empirical studies of
-            model behavior, with a particular interest in AI agents and reasoning
-            systems.
+            I am an undergraduate student in the Department of Automation at
+            Tsinghua University. My research uses controlled experiments to study
+            the behavior of language-model agents and reasoning systems.
           </p>
           <p>
-            A recurring question in my research is why a model can notice, describe,
-            or even explicitly acknowledge relevant information without that
-            information reliably changing what it does next. I am interested in
-            studying these gaps behaviorally and using them to inform better
-            evaluation, training, and cognitive architectures for AI.
+            A recurring theme in my work is the gap between what a model appears
+            to know and what actually governs its later behavior. I am interested
+            in action allocation, revision, procedural control, behavioral
+            internalization, and evaluation methods that preserve these distinctions
+            instead of compressing them into a single endpoint.
           </p>
+        </div>
+      </section>
+
+      <section class="section" id="publications">
+        <div class="section__label">Preprints</div>
+        <div class="section__content">
+          <div class="section-title-row">
+            <h2>Public research preprints</h2>
+            <span class="section-note">2026 · single author</span>
+          </div>
+
+          <div class="paper-list">
+            <article class="paper">
+              <div class="paper__year">2026</div>
+              <div class="paper__body">
+                <h3>Behavioral Success Without Internalization: When Scientific Judgements Fail to Bind Language-Model Policies</h3>
+                <p class="paper__author">Yibo Chen</p>
+                <p class="paper__venue">TechRxiv preprint</p>
+              </div>
+            </article>
+
+            <article class="paper">
+              <div class="paper__year">2026</div>
+              <div class="paper__body">
+                <h3>When Evidence Becomes a Veto: Procedural Objectives and Decision-Authority Inflation in LLM Agents</h3>
+                <p class="paper__author">Yibo Chen</p>
+                <p class="paper__venue">TechRxiv preprint</p>
+              </div>
+            </article>
+
+            <article class="paper">
+              <div class="paper__year">2026</div>
+              <div class="paper__body">
+                <h3>What Changes, When? Intervention Effects Along Coding-Agent Trajectories</h3>
+                <p class="paper__author">Yibo Chen</p>
+                <p class="paper__venue">
+                  TechRxiv preprint
+                  <a class="paper__link" href="https://figshare.com/articles/preprint/Test_Again_or_Fix_Now_Stage-Resolved_Intervention_Effects_in_Coding_Agents/33466513" target="_blank" rel="noreferrer">Paper ↗</a>
+                </p>
+              </div>
+            </article>
+
+            <article class="paper">
+              <div class="paper__year">2026</div>
+              <div class="paper__body">
+                <h3>Same Contract, Different Product Role: A Controlled Study of Coding-Agent Implementation Fidelity</h3>
+                <p class="paper__author">Yibo Chen</p>
+                <p class="paper__venue">
+                  TechRxiv preprint
+                  <a class="paper__link" href="https://figshare.com/articles/preprint/Same_Contract_Different_Product_Role_A_Controlled_Study_of_Coding-Agent_Implementation_Fidelity/33473521" target="_blank" rel="noreferrer">Paper ↗</a>
+                </p>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -71,43 +125,35 @@
         <div class="section__label">Research</div>
         <div class="section__content">
           <h2>Research interests</h2>
-          <div class="interest-grid">
-            <article class="interest">
-              <h3>AI Agents &amp; Model Behavior</h3>
+          <div class="research-lines">
+            <article>
+              <h3>AI agents &amp; model behavior</h3>
               <p>
-                Behavioral regularities in tool-using and coding agents, including
-                action allocation, adaptation, persistence, and decision-making under
-                changing evidence.
+                How tool-using and coding agents allocate actions, react to evidence,
+                construct procedural policies, and change behavior across a trajectory.
               </p>
             </article>
-            <article class="interest">
-              <h3>Reasoning &amp; Revision</h3>
+            <article>
+              <h3>Reasoning, revision &amp; internalization</h3>
               <p>
-                When additional computation, reflection, or feedback changes an
-                operative hypothesis — and when it only produces local repair without
-                genuine revision.
+                When a model's own judgement becomes causally binding for later
+                behavior, and when explicit recognition, reflection, or successful
+                training leaves the operative policy largely unchanged.
               </p>
             </article>
-            <article class="interest">
-              <h3>Evaluation &amp; Experimental Design</h3>
+            <article>
+              <h3>Evaluation &amp; cognitive architectures</h3>
               <p>
-                Controlled experiments and evaluation environments that separate
-                surface success from the mechanisms and behavioral changes that
-                produce it.
-              </p>
-            </article>
-            <article class="interest">
-              <h3>Cognitive Architectures for AI</h3>
-              <p>
-                How capabilities needed for robust execution — such as evaluation,
-                memory, adaptation, and control — can become native parts of learned
-                systems rather than only external scaffolding.
+                Experimental designs that separate endpoint performance from process
+                behavior, and architectures in which evaluation, control, memory, and
+                adaptation become native learned capabilities rather than external
+                scaffolding alone.
               </p>
             </article>
           </div>
           <p class="research-note">
-            I am especially interested in questions at the boundary between machine
-            learning, cognitive science, and interactive intelligent systems.
+            More broadly, I am interested in the boundary between machine learning,
+            cognitive science, and interactive intelligent systems.
           </p>
         </div>
       </section>
@@ -131,22 +177,14 @@
         <div class="section__content">
           <h2>Contact</h2>
           <p class="contact__intro">
-            The easiest way to reach me is by email. I am happy to hear from people
-            interested in related research questions.
+            For research correspondence, the easiest way to reach me is by email.
           </p>
-          <div class="contact__links">
-            <a href="mailto:cyb25@mails.tsinghua.edu.cn">
-              <span>Email</span>
-              cyb25@mails.tsinghua.edu.cn
-            </a>
-            <a href="https://github.com/chenyb0625-creator" target="_blank" rel="noreferrer">
-              <span>GitHub</span>
-              chenyb0625-creator ↗
-            </a>
-            <a href="assets/chenyibo_cv.pdf">
-              <span>Curriculum Vitae</span>
-              View CV
-            </a>
+          <div class="contact__inline">
+            <a href="mailto:cyb25@mails.tsinghua.edu.cn">cyb25@mails.tsinghua.edu.cn</a>
+            <span>·</span>
+            <a href="https://github.com/chenyb0625-creator" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <span>·</span>
+            <a href="assets/chenyibo_cv.pdf">CV</a>
           </div>
         </div>
       </section>
