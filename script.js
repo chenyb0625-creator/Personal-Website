@@ -1,10 +1,8 @@
 const header = document.querySelector(".site-header");
-const revealTargets = document.querySelectorAll(
-  ".section, .snapshot, .timeline__item, .project, .skills > div"
-);
+const revealTargets = document.querySelectorAll(".section");
 
 function updateHeader() {
-  header.classList.toggle("is-scrolled", window.scrollY > 24);
+  header.classList.toggle("is-scrolled", window.scrollY > 16);
 }
 
 for (const element of revealTargets) {
@@ -21,7 +19,7 @@ if ("IntersectionObserver" in window) {
         }
       }
     },
-    { threshold: 0.12 }
+    { threshold: 0.08 }
   );
 
   for (const element of revealTargets) {
