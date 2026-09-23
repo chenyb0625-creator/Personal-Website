@@ -80,7 +80,7 @@ a {
   justify-content: flex-end;
   gap: 0.35rem 1rem;
   color: var(--muted);
-  font-size: 0.91rem;
+  font-size: 0.9rem;
 }
 
 .nav-links a {
@@ -144,7 +144,7 @@ h1 {
 }
 
 .hero__lead {
-  max-width: 760px;
+  max-width: 750px;
   margin: 1rem 0 0;
   color: var(--muted);
   font-size: clamp(1.03rem, 1.8vw, 1.18rem);
@@ -201,6 +201,24 @@ h1 {
   line-height: 1.1;
 }
 
+.section-title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.25rem;
+  margin-bottom: 0.4rem;
+}
+
+.section-title-row h2 {
+  margin-bottom: 0.9rem;
+}
+
+.section-note {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
 .prose {
   max-width: 760px;
 }
@@ -213,30 +231,83 @@ h1 {
   font-size: 1.02rem;
 }
 
-.interest-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.paper-list {
   border-top: 1px solid var(--line);
-  border-left: 1px solid var(--line);
 }
 
-.interest {
-  min-height: 210px;
-  padding: 1.4rem;
-  border-right: 1px solid var(--line);
+.paper {
+  display: grid;
+  grid-template-columns: 62px minmax(0, 1fr);
+  gap: 1rem;
+  padding: 1.45rem 0;
   border-bottom: 1px solid var(--line);
 }
 
-.interest h3 {
-  margin: 0 0 0.6rem;
-  font-size: 1.02rem;
-  line-height: 1.35;
+.paper__year {
+  padding-top: 0.15rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-variant-numeric: tabular-nums;
 }
 
-.interest p {
+.paper__body h3 {
+  max-width: 730px;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.08rem, 2vw, 1.28rem);
+  font-weight: 600;
+  line-height: 1.42;
+}
+
+.paper__author,
+.paper__venue {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+}
+
+.paper__author {
+  color: var(--ink);
+}
+
+.paper__venue {
+  color: var(--muted);
+}
+
+.paper__link {
+  display: inline-block;
+  margin-left: 0.55rem;
+  color: var(--accent-dark);
+  font-weight: 650;
+  border-bottom: 1px solid #b8c8d8;
+}
+
+.paper__link:hover,
+.paper__link:focus-visible {
+  border-color: var(--accent-dark);
+}
+
+.research-lines {
+  border-top: 1px solid var(--line);
+}
+
+.research-lines article {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.8fr) minmax(0, 1.55fr);
+  gap: 1.5rem;
+  padding: 1.35rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.research-lines h3 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.research-lines p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.94rem;
+  font-size: 0.95rem;
 }
 
 .research-note {
@@ -278,38 +349,22 @@ h1 {
   max-width: 650px;
 }
 
-.contact__links {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.8rem;
-  margin-top: 1.6rem;
-}
-
-.contact__links a {
-  min-height: 92px;
-  padding: 1rem;
-  border: 1px solid var(--line);
-  border-radius: 7px;
-  color: var(--accent-dark);
-  font-size: 0.9rem;
-  font-weight: 650;
-  transition: border-color 140ms ease, background 140ms ease;
-}
-
-.contact__links a:hover,
-.contact__links a:focus-visible {
-  border-color: #b5c4d2;
-  background: var(--faint);
-}
-
-.contact__links span {
-  display: block;
-  margin-bottom: 0.18rem;
+.contact__inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.65rem;
   color: var(--muted);
-  font-size: 0.72rem;
-  font-weight: 750;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+.contact__inline a {
+  color: var(--accent-dark);
+  border-bottom: 1px solid #b8c8d8;
+}
+
+.contact__inline a:hover,
+.contact__inline a:focus-visible {
+  border-color: var(--accent-dark);
 }
 
 .site-footer {
@@ -360,13 +415,20 @@ h1 {
     padding-top: 0;
   }
 
-  .interest-grid,
-  .contact__links {
-    grid-template-columns: 1fr;
+  .section-title-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0;
   }
 
-  .interest {
-    min-height: 0;
+  .paper {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+
+  .research-lines article {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
   }
 }
 
@@ -387,6 +449,12 @@ h1 {
   .education {
     flex-direction: column;
     gap: 0.4rem;
+  }
+
+  .paper__link {
+    display: block;
+    width: fit-content;
+    margin: 0.25rem 0 0;
   }
 }
 
