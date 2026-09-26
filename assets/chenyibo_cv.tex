@@ -1,71 +1,119 @@
-\documentclass[10pt]{article}
-\usepackage[letterpaper,margin=0.58in]{geometry}
+\documentclass[9.6pt,a4paper]{article}
+\usepackage[a4paper,left=0.72in,right=0.72in,top=0.44in,bottom=0.44in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{microtype}
-\usepackage[hidelinks]{hyperref}
+\usepackage{tabularx}
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{xcolor}
-\usepackage{tabularx}
-\usepackage{parskip}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{ragged2e}
 \pagestyle{empty}
-
-\definecolor{accent}{RGB}{35,55,85}
-\hypersetup{colorlinks=true,urlcolor=accent,linkcolor=accent}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
-\setlist[itemize]{leftmargin=1.15em,itemsep=1.1pt,topsep=2pt,parsep=0pt,partopsep=0pt}
-\titleformat{\section}{\large\bfseries\color{accent}}{}{0pt}{}[\vspace{-0.25em}\color{accent}\titlerule]
-\titlespacing*{\section}{0pt}{7pt}{4pt}
+\setlength{\tabcolsep}{0pt}
+\emergencystretch=1em
 
-\newcommand{\entry}[2]{\begin{tabularx}{\textwidth}{@{}Xr@{}}#1 & #2\end{tabularx}}
-\newcommand{\paper}[3]{%
-  \textbf{#1}\\[-1pt]
-  \href{#2}{TechRxiv preprint} \hfill #3\\[2pt]
+\definecolor{cvpurple}{HTML}{6433A5}
+\definecolor{rulepurple}{HTML}{D8D0E8}
+\definecolor{softpurple}{HTML}{F4F2F8}
+\definecolor{textgray}{HTML}{777777}
+\definecolor{tagborder}{HTML}{D7D0E7}
+
+\hypersetup{colorlinks=true,urlcolor=cvpurple,linkcolor=cvpurple}
+
+\newcommand{\sectiontitle}[1]{%
+  \vspace{5.5pt}%
+  {\fontsize{12.8}{14.2}\selectfont\color{cvpurple}#1}\par
+  \vspace{-1pt}{\color{rulepurple}\rule{\linewidth}{0.55pt}}\vspace{3.2pt}
 }
+
+\newcommand{\entryrow}[2]{%
+  \begin{tabularx}{\linewidth}{@{}X>{\raggedleft\arraybackslash}p{1.35in}@{}}
+    #1 & {\color{textgray}#2}\\
+  \end{tabularx}
+}
+
+\newcommand{\pubrow}[3]{%
+  \begin{tabularx}{\linewidth}{@{}X>{\raggedleft\arraybackslash}p{0.60in}@{}}
+    {\fontsize{8.65}{10.0}\selectfont\textbf{#1}} & {\color{textgray}#3}\\[-1pt]
+  \end{tabularx}
+  {\fontsize{8.1}{9.3}\selectfont\color{textgray}\href{#2}{TechRxiv preprint} \;\textperiodcentered\; single author}\par\vspace{2.0pt}
+}
+
+\newcommand{\skillrow}[2]{%
+  \begin{tabularx}{\linewidth}{@{}>{\bfseries\color{cvpurple}}p{1.18in}X@{}}
+  #1 & #2\\[2.2pt]
+  \end{tabularx}
+}
+
+\newcommand{\tag}[1]{\fcolorbox{tagborder}{softpurple}{\strut\hspace{5pt}#1\hspace{5pt}}}
 
 \begin{document}
 
-{\fontsize{21}{23}\selectfont\bfseries Yibo Chen}\\[2pt]
-\textbf{Undergraduate Researcher in Artificial Intelligence}\\[2pt]
-Department of Automation, Tsinghua University \quad | \quad Beijing, China\\[2pt]
-\href{mailto:cyb25@mails.tsinghua.edu.cn}{cyb25@mails.tsinghua.edu.cn}
-\quad | \quad
-\href{https://github.com/chenyb0625-creator}{github.com/chenyb0625-creator}
-\quad | \quad
-\href{https://chenyb0625-creator.github.io/Personal-Website/}{Academic homepage}
+{\fontsize{26.5}{29}\selectfont Chen Yibo}\par\vspace{5pt}
+{\fontsize{8.65}{10.3}\selectfont\color{textgray}
+Beijing, China\quad |\quad
+\href{mailto:cyb25@mails.tsinghua.edu.cn}{cyb25@mails.tsinghua.edu.cn}\quad |\quad
++86 18324504278\quad |\quad
+GitHub: \href{https://github.com/chenyb0625-creator}{github.com/chenyb0625-creator}
+}\par\vspace{4pt}
+{\fontsize{8.65}{10.3}\selectfont\color{textgray}
+Personal website: \href{https://chenyb0625-creator.github.io/Personal-Website/}{https://chenyb0625-creator.github.io/Personal-Website/}
+}\par\vspace{6pt}
 
-\section{Research Interests}
-AI agents and model behavior; reasoning-to-action gaps; revision and behavioral internalization; procedural control and decision authority; evaluation methodology; cognitive architectures for learned control, memory, and adaptation.
+\colorbox{softpurple}{%
+  \parbox{\dimexpr\linewidth-2\fboxsep\relax}{%
+    \vspace{1pt}\fontsize{8.85}{12.0}\selectfont\justifying
+    I am an undergraduate student in the Department of Automation at Tsinghua University. My research studies how language-model agents turn information and reasoning into action: when evidence changes behavior, when it does not, and how these differences should reshape evaluation and model design. I am especially interested in reasoning-to-action gaps, revision, behavioral internalization, procedural control, and cognitive architectures for learned control and adaptation.
+    \vspace{2pt}%
+  }%
+}
 
-\section{Education}
-\entry{\textbf{Tsinghua University} -- Department of Automation, Undergraduate}{2025--Present}
-
-\section{Research Experience}
-\entry{\textbf{Independent Research} -- Tsinghua University}{2026--Present}
-\begin{itemize}
-  \item Lead end-to-end studies of language-model agents using controlled, paired, and stage-resolved experiments; separate process behavior from endpoint success and test robustness across tasks, models, and operationalizations.
-  \item Produced four single-author public preprints on coding-agent trajectories, implementation fidelity, procedural objectives, and whether model judgements become causally binding for later behavior.
-\end{itemize}
+\sectiontitle{Education Background}
+\entryrow{\textbf{Tsinghua University}}{2025 -- Present}
 \vspace{1pt}
-\entry{\textbf{Collaborative Research} -- Beijing Institute for General Artificial Intelligence (BIGAI)}{Summer 2026--Present}
-\begin{itemize}
-  \item Contribute to research on language-model reasoning and representation, including data review, experimental redesign, probing, quantitative analysis, and circuit-discovery work.
+{\color{textgray}Department of Automation \textperiodcentered{} Undergraduate}\par
+
+\sectiontitle{Research Experience}
+\entryrow{\textbf{Independent Research}}{2026 -- Present}
+\vspace{2pt}
+\begin{itemize}[leftmargin=1.05em,itemsep=0.5pt,topsep=0.5pt]
+  \item Design controlled, paired, and stage-resolved experiments on language-model agents, separating process behavior from endpoint success and testing robustness across tasks and models.
+  \item Produced four public single-author preprints on coding-agent trajectories, implementation fidelity, procedural objectives, and judgement-to-policy internalization.
+\end{itemize}
+\vspace{0pt}
+\entryrow{\textbf{Collaborative Research, Tsinghua University}}{Summer 2026 -- Present}
+\vspace{2pt}
+\begin{itemize}[leftmargin=1.05em,itemsep=0.5pt,topsep=0.5pt]
+  \item Work with Fan Lifeng and Zhihao Cao on language-model reasoning and representation; contributions include data review, experimental redesign, probing, quantitative analysis, and circuit discovery.
 \end{itemize}
 
-\section{Preprints}
-\paper{Behavioral Success Without Internalization: When Scientific Judgements Fail to Bind Language-Model Policies}{https://figshare.com/articles/preprint/Behavioral_Success_Without_Internalization/33963382}{2026}
-\paper{When Evidence Becomes a Veto: Procedural Objectives and Decision-Authority Inflation in LLM Agents}{https://figshare.com/articles/preprint/When_Evidence_Becomes_a_Veto_Procedural_Objectives_and_Decision-Authority_Inflation_in_LLM_Agents/33949339}{2026}
-\paper{What Changes, When? Intervention Effects Along Coding-Agent Trajectories}{https://figshare.com/articles/preprint/Test_Again_or_Fix_Now_Stage-Resolved_Intervention_Effects_in_Coding_Agents/33466513}{2026}
-\paper{Same Contract, Different Product Role: A Controlled Study of Coding-Agent Implementation Fidelity}{https://figshare.com/articles/preprint/Same_Contract_Different_Product_Role_A_Controlled_Study_of_Coding-Agent_Implementation_Fidelity/33473521}{2026}
-\vspace{-2pt}
-{\small All four preprints are single-author works.}
+\sectiontitle{Selected Preprints}
+\pubrow{Behavioral Success Without Internalization: When Scientific Judgements Fail to Bind Language-Model Policies}{https://figshare.com/articles/preprint/Behavioral_Success_Without_Internalization/33963382}{2026}
+\pubrow{When Evidence Becomes a Veto: Procedural Objectives and Decision-Authority Inflation in LLM Agents}{https://figshare.com/articles/preprint/When_Evidence_Becomes_a_Veto_Procedural_Objectives_and_Decision-Authority_Inflation_in_LLM_Agents/33949339}{2026}
+\pubrow{What Changes, When? Intervention Effects Along Coding-Agent Trajectories}{https://figshare.com/articles/preprint/Test_Again_or_Fix_Now_Stage-Resolved_Intervention_Effects_in_Coding_Agents/33466513}{2026}
+\pubrow{Same Contract, Different Product Role: A Controlled Study of Coding-Agent Implementation Fidelity}{https://figshare.com/articles/preprint/Same_Contract_Different_Product_Role_A_Controlled_Study_of_Coding-Agent_Implementation_Fidelity/33473521}{2026}
 
-\section{Methods \& Technical Skills}
-Controlled and paired experimental design; stage-resolved and causal evaluation; bootstrap confidence intervals and sensitivity analysis; LLM/agent evaluation pipelines; Python; PyTorch; Hugging Face Transformers; Linux/SSH; Git; LaTeX.
+\vspace{-1pt}\sectiontitle{Personal Skills}
+\skillrow{Research}{Controlled/paired experiments; stage-resolved evaluation; bootstrap CIs; sensitivity analysis; LLM/agent evaluation.}
+\skillrow{Programming}{Python, PyTorch, Hugging Face Transformers; C/C++.}
+\skillrow{Tools}{Linux/SSH, Git, LaTeX, Jupyter Notebook.}
+\skillrow{Languages}{Chinese native; English reading and writing for academic research.}
+
+\vspace{-1pt}\sectiontitle{Research Interests}
+{\fontsize{8.45}{10}\selectfont
+\tag{AI Agents}\hspace{7pt}
+\tag{Model Behavior}\hspace{7pt}
+\tag{Reasoning \& Action}\hspace{7pt}
+\tag{Internalization}\hspace{7pt}
+\tag{Evaluation}\hspace{7pt}
+\tag{Cognitive Architectures}
+}
 
 \vfill
-{\footnotesize\color{gray}Last updated: September 2026}
+{\fontsize{8.2}{9.5}\selectfont\color{textgray}Last updated: September 2026.}
 
 \end{document}
