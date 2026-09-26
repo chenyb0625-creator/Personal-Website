@@ -1,0 +1,71 @@
+\documentclass[10pt]{article}
+\usepackage[letterpaper,margin=0.58in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{parskip}
+\pagestyle{empty}
+
+\definecolor{accent}{RGB}{35,55,85}
+\hypersetup{colorlinks=true,urlcolor=accent,linkcolor=accent}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{leftmargin=1.15em,itemsep=1.1pt,topsep=2pt,parsep=0pt,partopsep=0pt}
+\titleformat{\section}{\large\bfseries\color{accent}}{}{0pt}{}[\vspace{-0.25em}\color{accent}\titlerule]
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+
+\newcommand{\entry}[2]{\begin{tabularx}{\textwidth}{@{}Xr@{}}#1 & #2\end{tabularx}}
+\newcommand{\paper}[3]{%
+  \textbf{#1}\\[-1pt]
+  \href{#2}{TechRxiv preprint} \hfill #3\\[2pt]
+}
+
+\begin{document}
+
+{\fontsize{21}{23}\selectfont\bfseries Yibo Chen}\\[2pt]
+\textbf{Undergraduate Researcher in Artificial Intelligence}\\[2pt]
+Department of Automation, Tsinghua University \quad | \quad Beijing, China\\[2pt]
+\href{mailto:cyb25@mails.tsinghua.edu.cn}{cyb25@mails.tsinghua.edu.cn}
+\quad | \quad
+\href{https://github.com/chenyb0625-creator}{github.com/chenyb0625-creator}
+\quad | \quad
+\href{https://chenyb0625-creator.github.io/Personal-Website/}{Academic homepage}
+
+\section{Research Interests}
+AI agents and model behavior; reasoning-to-action gaps; revision and behavioral internalization; procedural control and decision authority; evaluation methodology; cognitive architectures for learned control, memory, and adaptation.
+
+\section{Education}
+\entry{\textbf{Tsinghua University} -- Department of Automation, Undergraduate}{2025--Present}
+
+\section{Research Experience}
+\entry{\textbf{Independent Research} -- Tsinghua University}{2026--Present}
+\begin{itemize}
+  \item Lead end-to-end studies of language-model agents using controlled, paired, and stage-resolved experiments; separate process behavior from endpoint success and test robustness across tasks, models, and operationalizations.
+  \item Produced four single-author public preprints on coding-agent trajectories, implementation fidelity, procedural objectives, and whether model judgements become causally binding for later behavior.
+\end{itemize}
+\vspace{1pt}
+\entry{\textbf{Collaborative Research} -- Beijing Institute for General Artificial Intelligence (BIGAI)}{Summer 2026--Present}
+\begin{itemize}
+  \item Contribute to research on language-model reasoning and representation, including data review, experimental redesign, probing, quantitative analysis, and circuit-discovery work.
+\end{itemize}
+
+\section{Preprints}
+\paper{Behavioral Success Without Internalization: When Scientific Judgements Fail to Bind Language-Model Policies}{https://figshare.com/articles/preprint/Behavioral_Success_Without_Internalization/33963382}{2026}
+\paper{When Evidence Becomes a Veto: Procedural Objectives and Decision-Authority Inflation in LLM Agents}{https://figshare.com/articles/preprint/When_Evidence_Becomes_a_Veto_Procedural_Objectives_and_Decision-Authority_Inflation_in_LLM_Agents/33949339}{2026}
+\paper{What Changes, When? Intervention Effects Along Coding-Agent Trajectories}{https://figshare.com/articles/preprint/Test_Again_or_Fix_Now_Stage-Resolved_Intervention_Effects_in_Coding_Agents/33466513}{2026}
+\paper{Same Contract, Different Product Role: A Controlled Study of Coding-Agent Implementation Fidelity}{https://figshare.com/articles/preprint/Same_Contract_Different_Product_Role_A_Controlled_Study_of_Coding-Agent_Implementation_Fidelity/33473521}{2026}
+\vspace{-2pt}
+{\small All four preprints are single-author works.}
+
+\section{Methods \& Technical Skills}
+Controlled and paired experimental design; stage-resolved and causal evaluation; bootstrap confidence intervals and sensitivity analysis; LLM/agent evaluation pipelines; Python; PyTorch; Hugging Face Transformers; Linux/SSH; Git; LaTeX.
+
+\vfill
+{\footnotesize\color{gray}Last updated: September 2026}
+
+\end{document}
